@@ -21,6 +21,7 @@ declare module 'vue' {
     BOffcanvas: typeof import('bootstrap-vue-next')['BOffcanvas']
     BRow: typeof import('bootstrap-vue-next')['BRow']
     CartItem: typeof import('./src/components/CartItem.vue')['default']
+    Footer: typeof import('./src/components/Footer.vue')['default']
     IBi0Circle: typeof import('~icons/bi/0-circle')['default']
     IBiBiCart: typeof import('~icons/bi/bi-cart')['default']
     IBiCart: typeof import('~icons/bi/cart')['default']

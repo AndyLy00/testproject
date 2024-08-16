@@ -16,7 +16,7 @@
       <div class="d-flex align-items-center justify-content-center" style="gap: .5rem">
         <BButton class="btn-info btn-sm" @click="decreaseCartQuantity">-</BButton>
         <div>
-          <span class="fs-5">{{ quantity }}</span>
+          <span>{{ quantity }}</span>
         </div>
         <BButton class="btn-info btn-sm" @click="increaseCartQuantity">+</BButton>
       </div>
@@ -30,7 +30,7 @@
   </BRow>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { computed } from 'vue'
 import { useShoppingCartStore } from '@/context/ShoppingCartContext'
 import storeItems from '@/data/data.json'
@@ -58,7 +58,7 @@ const removeFromCart = () => {
   store.removeFromCart(props.id)
 }
 
-const formatCurrency = (amount: number) => {
+const formatCurrency = (amount) => {
   return formatCurrencyUtil(amount)
 }
 </script>

@@ -36,7 +36,7 @@
   </BNavbar>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import {useShoppingCartStore} from '@/context/ShoppingCartContext'
 import {computed} from "vue";
 const store = useShoppingCartStore()
