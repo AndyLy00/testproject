@@ -1,5 +1,5 @@
 <template>
-  <BRow md={1} xs={1} lg={1} className="g-3">
+  <BRow cols-lg="1" cols-md="1" cols-sm="1" class="gap-3">
     <BCol v-for="item in myItems" :key="item.id">
       <StoreItem v-bind="item" />
     </BCol>

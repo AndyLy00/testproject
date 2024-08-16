@@ -5,9 +5,9 @@
         <img src="../assets/logo.png" alt="Logo" style="width: 70px;"/>
       </div>
       <BNav>
-        <router-link to="/" custom>
-          <BNavItem>Store</BNavItem>
-        </router-link>
+        <RouterLink to="/" custom>
+          <BNavItem active>Store</BNavItem>
+        </RouterLink>
       </BNav>
       <BButton
           style="width: 3rem; height: 3rem; position: relative"
