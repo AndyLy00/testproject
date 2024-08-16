@@ -10,12 +10,14 @@
         </RouterLink>
       </BNav>
       <BButton
+          @click="openCartFunction"
           style="width: 3rem; height: 3rem; position: relative"
           variant="outline-info"
           class="rounded-circle"
       >
-        <IBiCart icon="cart" style="color: #33b5e5" />
+        <IBiCart icon="cart" style="color: #33b5e5"/>
         <div
+            v-if="cartQuantity > 0"
             class="rounded-circle bg-danger d-flex justify-content-center align-items-center"
             style="
             color: white;
@@ -27,8 +29,7 @@
             transform: translate(25%, 25%);
           "
         >
-          1
-<!--          {{ cartQuantity }}-->
+          {{ cartQuantity }}
         </div>
       </BButton>
     </BContainer>
@@ -36,8 +37,13 @@
 </template>
 
 <script setup lang="ts">
-// import { useShoppingCartStore } from '../stores/useShoppingCart'
-import logo from "../assets/logo.png";
-// const { openCart, cartQuantity } = useShoppingCartStore()
+import {useShoppingCartStore} from '@/context/ShoppingCartContext'
+import {computed} from "vue";
+const store = useShoppingCartStore()
+const cartQuantity = computed(() => store.cartQuantity)
+
+function openCartFunction() {
+  store.openCart();
+}
 
 </script>
