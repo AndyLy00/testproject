@@ -37,7 +37,6 @@
 
 <script setup lang="ts">
 // import { useShoppingCartStore } from '../stores/useShoppingCart'
-import {BContainer, BNavbar, BButton, BNav, BNavItem} from "bootstrap-vue-next";
 import logo from "../assets/logo.png";
 // const { openCart, cartQuantity } = useShoppingCartStore()
 

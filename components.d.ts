@@ -7,8 +7,15 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BButton: typeof import('bootstrap-vue-next')['BButton']
     BCardImg: typeof import('bootstrap-vue-next')['BCardImg']
+    BCol: typeof import('bootstrap-vue-next')['BCol']
+    BContainer: typeof import('bootstrap-vue-next')['BContainer']
     BImg: typeof import('bootstrap-vue-next')['BImg']
+    BNav: typeof import('bootstrap-vue-next')['BNav']
+    BNavbar: typeof import('bootstrap-vue-next')['BNavbar']
+    BNavItem: typeof import('bootstrap-vue-next')['BNavItem']
+    BRow: typeof import('bootstrap-vue-next')['BRow']
     CartItem: typeof import('./src/components/CartItem.vue')['default']
     IBi0Circle: typeof import('~icons/bi/0-circle')['default']
     IBiBiCart: typeof import('~icons/bi/bi-cart')['default']
