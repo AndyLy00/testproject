@@ -18,6 +18,7 @@ declare module 'vue' {
     BNav: typeof import('bootstrap-vue-next')['BNav']
     BNavbar: typeof import('bootstrap-vue-next')['BNavbar']
     BNavItem: typeof import('bootstrap-vue-next')['BNavItem']
+    BOffcanvas: typeof import('bootstrap-vue-next')['BOffcanvas']
     BRow: typeof import('bootstrap-vue-next')['BRow']
     CartItem: typeof import('./src/components/CartItem.vue')['default']
     IBi0Circle: typeof import('~icons/bi/0-circle')['default']

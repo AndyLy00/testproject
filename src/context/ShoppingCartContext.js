@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
-
 export const useShoppingCartStore = defineStore('shoppingCart', () => {
     const isOpen = ref(false)
     const cartItems = ref([])

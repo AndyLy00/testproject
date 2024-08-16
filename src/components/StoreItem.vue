@@ -57,8 +57,8 @@
 
 <script setup>
 import {computed, ref} from 'vue'
-import { useShoppingCartStore } from '../context/ShoppingCartContext'
-import { formatCurrency } from '../utilities/formatCurrency'
+import { useShoppingCartStore } from '@/context/ShoppingCartContext'
+import { formatCurrency } from '@/utilities/formatCurrency'
 
 const props = defineProps({
   id: Number,

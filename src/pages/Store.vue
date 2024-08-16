@@ -4,6 +4,7 @@
       <StoreItem v-bind="item" />
     </BCol>
   </BRow>
+  <ShoppingCart/>
 </template>
 
 <script>
