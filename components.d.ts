@@ -25,6 +25,8 @@ declare module 'vue' {
     IBi0Circle: typeof import('~icons/bi/0-circle')['default']
     IBiBiCart: typeof import('~icons/bi/bi-cart')['default']
     IBiCart: typeof import('~icons/bi/cart')['default']
+    IBiStar: typeof import('~icons/bi/star')['default']
+    IBiStarFill: typeof import('~icons/bi/star-fill')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

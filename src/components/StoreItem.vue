@@ -1,14 +1,22 @@
 <template>
   <BCard class="h-100">
     <BCardBody class="d-flex flex-column">
+      <img :src="imageUrl" alt="Image" class="objectImages"/>
       <BCardTitle class="d-flex justify-content-between align-items-baseline">
         <span class="fs-2">{{ name }}</span>
-        <span class="ms-2 text-muted">{{ formatCurrency(price) }}</span>
+          <span class="ms-2 text-muted">{{ formatCurrency(price) }}</span>
       </BCardTitle>
-      <div class="d-flex flex-column mb-4">
-        <span class="fs-3">{{ category }}</span>
-        <span class="fs-6">{{ description }}</span>
+      <div class="d-flex justify-content-between">
+        <div class="d-flex flex-column mb-4">
+          <span class="fs-3">{{ category }}</span>
+          <span class="fs-6">{{ producer }}</span>
+        </div>
+        <div class="d-flex mb-4 align-items-center gap-2">
+          <IBiStarFill style="color: #ffc300"/>
+          <span class="fs-3">{{ rating }}</span>
+        </div>
       </div>
+
 
       <div class="mt-auto">
         <BButton
@@ -28,6 +36,7 @@
               style="gap: .5rem"
           >
             <BButton
+                v-if="quantity > 0"
                 class="btn-info"
                 @click="decreaseCartQuantity(id)"
             >
@@ -37,11 +46,15 @@
               <span class="fs-3">{{ quantity }}</span> in cart
             </div>
             <BButton
+                v-if="quantity < objectsInStock"
                 class="btn-info"
                 @click="increaseCartQuantity(id)"
             >
               +
             </BButton>
+            <div>
+              /{{ objectsInStock }}
+            </div>
           </div>
           <BButton
               class="btn-danger btn-sm"
@@ -65,9 +78,13 @@ const props = defineProps({
   name: String,
   price: Number,
   category: String,
-  description: String
+  description: String,
+  rating: Number,
+  producer: String,
+  objectsInStock: Number,
+  image: String
 })
-
+const imageUrl = new URL(`../images/${props.id}.jpg`, import.meta.url).href
 const store = useShoppingCartStore()
 const quantity = computed(() => store.getItemQuantity(props.id))
 
@@ -84,3 +101,13 @@ function removeFromCart() {
 }
 
 </script>
+
+<style>
+.objectImages {
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+</style>
